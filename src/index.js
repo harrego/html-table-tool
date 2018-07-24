@@ -1,4 +1,4 @@
-function fillTable(objects) {
+export default function fillTable(objects) {
 	if (!objects.tableElement) { throw "Missing tableElement" }
 	else if (!objects.sectionCount) { throw "Missing sectionCount" }
 	else if (!objects.rowCountForSection) { throw "Missing rowCountForSection" }
@@ -29,4 +29,3 @@ function fillTable(objects) {
 		}
 	}
 }
-

@@ -4,10 +4,16 @@
 
 ## Install
 
-Download the latest version from the [releases](https://github.com/harrego/html-table-tool/releases/) page and place the downloaded JS file somewhere in your project structure then import it with HTML like so:
-`<script type="text/javascript" src="table-tool-1.0.0.min.js"></script>`
+### Webpack / ES6 / NPM
 
-*make sure you change the `src` to the appropriate location in your project*
+First, install the library like so: `npm i html-table-tool`, then import the library function in an ES6 JS file, `import fillTable from "html-table-tool"`
+
+### Browser JS File
+
+Download the latest version from the [releases](https://github.com/harrego/html-table-tool/releases/) page and place the downloaded JS file somewhere in your project structure then import it with HTML like so:
+`<script type="text/javascript" src="table-tool-1.0.0.min.js"></script>`, the tool is then usable as `fillTable()`
+
+*Make sure you change the `src` to the appropriate location in your project*
 
 ## Usage
 
@@ -23,7 +29,7 @@ The library uses one function `fillTable` with one parameter, an object with 5 r
 
 An example of a broken down object can be seen here:
 
-### Variable setup
+#### Variable setup
 
 ```
 // The data to display in the table
@@ -33,14 +39,14 @@ var people = ["Harry", "Jane", "Brian"]
 var tableObjects = {
 ```
 
-### tableElement
+#### tableElement
 
 ```
 // DOM table element
 tableElement: document.getElementById("example-table"),
 ```
 
-### sectionCount
+#### sectionCount
 
 
 ```
@@ -48,7 +54,7 @@ tableElement: document.getElementById("example-table"),
 sectionCount: 2,
 ```
 
-### rowCountForSection
+#### rowCountForSection
 
 ```
 // Amount of rows in each section
@@ -61,14 +67,14 @@ rowCountForSection: function(section) {
 },
 ```
 
-### columnCountForIndexPath
+#### columnCountForIndexPath
 
 ```
 // In this case only 1 column for both sections
 columnCountForIndexPath: function(indexPath) { return 1 },
 ```
 
-### cellForIndexPath
+#### cellForIndexPath
 
 ```
 // Returning the cell
@@ -82,7 +88,7 @@ cellForIndexPath: function(cell, indexPath) {
 }
 ```
 
-### Finalising
+#### Finalising
 
 ```
 }
@@ -90,6 +96,16 @@ cellForIndexPath: function(cell, indexPath) {
 fillTable(tableObjects)
 ```
 
-The above code will produce the following table:
+## Building
 
-![Example table](https://github.com/harrego/html-table-tool/raw/master/repo/images/example-table.png)
+**NOTE:** Building is only required for development.
+
+The project uses `webpack` and `babel` to bundle a single JS file for the browser.
+
+To build first install all depencides:
+
+`npm i`
+
+Then build with `webpack`:
+
+`npm run build` (or `npm run dev` for development and debugging)

@@ -1,0 +1,30 @@
+{
+  "name": "html-table-tool",
+  "version": "1.1.0",
+  "description": "Lightweight JS library that fills a HTML table with data in minimal code",
+  "main": "dist/html-table-tool.js",
+  "module": "src/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harrego/html-table-tool.git"
+  },
+  "author": "Harry Stanton",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/harrego/html-table-tool/issues"
+  },
+  "homepage": "https://github.com/harrego/html-table-tool#readme"
+}
